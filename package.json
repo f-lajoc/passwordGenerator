@@ -1,0 +1,16 @@
+{
+  "name": "scrimbaclass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./css/style.css -o ./dist/main.css",
+    "watch": "tailwindcss -i ./css/style.css -o ./dist/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}

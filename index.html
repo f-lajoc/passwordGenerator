@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PW-Generator</title>
+  <link href="/dist/main.css" rel="stylesheet">
+</head>
+<body class="bg-color1 text-color2 box-border h-screen flex flex-col justify-center items-center">
+  <div class="border border-solid  border-cyan-900 p-2">
+  <h1 class="text-2xl font-bold text-color2">Generate a</h1>
+  <h2 class="text-2xl font-bold  text-color3">random password</h2>
+  <p class="text-xs mt-2 text-color4">Never use an insecure password again.</p>
+  
+   <!-- button1 -->
+  <div class="flex justify-between text-sm mt-4">
+<label for="number">Number</label>
+<input type="checkbox" id="number">
+  </div>
+ <!-- button2 -->
+   <div class="flex justify-between text-sm">
+<label for="charater">Charater</label>
+<input type="checkbox" id="charater">
+  </div>
+  <!-- button3 -->
+   <div class="flex justify-between text-sm">
+<label for="alphabeth">Alphabeth</label>
+<input type="checkbox" id="alphabeth">
+  </div>
+  <button class="text-xs text-white bg-green-600 px-2 py-1 border rounded mt-4">Generate passwords</button>
+  <p id="pwDisplay" class="mt-2 mb-3">DISPLAY</p>
+  <hr>
+
+  <div class="flex my-3 gap-x-4 justify-between w-full">
+    <button class="bg-slate-950 border rounded text-green-600 w-6/12">SAVE</button>
+    <button class="bg-slate-950 border rounded text-green-600 w-6/12">CLEAR ALL</button>
+  </div>
+  </div>
+</body>
+</html>
