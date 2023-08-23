@@ -38,13 +38,23 @@
 <input type="checkbox" class="accent-color6 dark:accent-color1" id="alphabeth" checked>
   </div>
 
-  <button class="text-xs text-white bg-color3 dark:bg-color5 dark:font-medium px-2 py-1 rounded mt-4">Generate passwords</button>
-  <p id="pwDisplay" class="mt-2 mb-3 text-center">DISPLAY</p>
+  <div class="flex justify-between mt-4">
+  <button id="pw-gen" class="text-xs text-white bg-color3 dark:bg-color5 dark:font-medium px-2 py-1 rounded ">Generate passwords</button>
+ <select id="pw-length"  class="text-xs text-white bg-color3 dark:bg-color5 dark:font-medium p-1 rounded ">
+    <option value="10" selected>10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+  </select>
+</div>
+  <p id="pw-display" class="mt-2 mb-3 text-center">DISPLAY</p>
   <hr class="border-color4 border-solid">
 
   <div class="flex my-3 text-sm gap-x-4 justify-between w-full">
-    <button class="bg-color2 dark:bg-color6 rounded text-color5 w-6/12 font-bold">SAVE</button>
-    <button class="bg-color2 dark:bg-color6 rounded text-color5 w-6/12 font-bold">CLEAR ALL</button>
+    <button id="save-btn" class="bg-color2 dark:bg-color6 rounded text-color5 w-6/12 font-bold">SAVE</button>
+    <button id="clear-btn" class="bg-color2 dark:bg-color6 rounded text-color5 w-6/12 font-bold">CLEAR ALL</button>
   </div>
   </div>
 
