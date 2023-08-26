@@ -123,7 +123,7 @@ pwGenerateBtn.addEventListener("click", function () {
 		}
 		else {
 		    pwDisplayEl.innerText = "ERROR";
-		    pwDisplayEl.style.color = "red";
+						
 		}
 		
   }

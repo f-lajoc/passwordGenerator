@@ -791,6 +791,18 @@ video {
   display: none;
 }
 
+.h-\[80vh\] {
+  height: 80vh;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-\[0vh\] {
+  height: 0vh;
+}
+
 .h-\[90vh\] {
   height: 90vh;
 }
