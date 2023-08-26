@@ -7,101 +7,15 @@
 		event.preventDefault();
 		document.documentElement.classList.toggle("dark");
 	});
+	
 })();
 
-const characters = [
-	"A",
-	"B",
-	"C",
-	"D",
-	"E",
-	"F",
-	"G",
-	"H",
-	"I",
-	"J",
-	"K",
-	"L",
-	"M",
-	"N",
-	"O",
-	"P",
-	"Q",
-	"R",
-	"S",
-	"T",
-	"U",
-	"V",
-	"W",
-	"X",
-	"Y",
-	"Z",
-	"a",
-	"b",
-	"c",
-	"d",
-	"e",
-	"f",
-	"g",
-	"h",
-	"i",
-	"j",
-	"k",
-	"l",
-	"m",
-	"n",
-	"o",
-	"p",
-	"q",
-	"r",
-	"s",
-	"t",
-	"u",
-	"v",
-	"w",
-	"x",
-	"y",
-	"z",
-	"0",
-	"1",
-	"2",
-	"3",
-	"4",
-	"5",
-	"6",
-	"7",
-	"8",
-	"9",
-	"~",
-	"`",
-	"!",
-	"@",
-	"#",
-	"$",
-	"%",
-	"^",
-	"&",
-	"*",
-	"(",
-	")",
-	"_",
-	"-",
-	"+",
-	"=",
-	"{",
-	"[",
-	"}",
-	"]",
-	"|",
-	":",
-	",",
-	":",
-	";",
-	".",
-	"?",
-	"/",
-];
+// Password Generation array
+const alphabeth = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+const number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const symbol = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '-', '.', '~', '|', '<', '>', '=', '-', '_', '/', ':', ';', '?', '[', ']', '{', '}', '~'];
 
+//DOM Interaction 
 const pwGenerateBtn = document.getElementById("pw-gen");
 const pwDisplayEl = document.getElementById("pw-display");
 const saveBtn = document.getElementById("save-btn");
@@ -111,63 +25,137 @@ const numberCheck = document.getElementById("number");
 const symbolCheck = document.getElementById("symbol");
 const pwLenghtEl = document.getElementById("pw-length");
 
-// let char = console.log(characters.splice(62, 28));
-// let num = console.log(characters.splice(52, 10));
-// let alph = console.log(characters.splice(0, 52));
+//Password Generation requirements 
 
 pwGenerateBtn.addEventListener("click", function () {
-	// reusuable function throught the array
-	function pwArr() {
-		if (
+	let pwGen = "";
+	
+	function randomPwDisplay() {
+	//to check if alphabeth only is required 
+      		if (
 			alphabethCheck.checked === true &&
 			numberCheck.checked === false &&
 			symbolCheck.checked === false
 		) {
-
-      // characters.splice(characters.indexOf("~"), characters.indexOf("/") - characters.indexOf("~") + 1);
-		// } else if (
-		// 	alphabethCheck.checked === true &&
-		// 	symbolCheck.checked === true &&
-		// 	numberCheck.checked === false
-		// ) {
-      
-      // characters.splice(characters.indexOf("0"), characters.indexOf("9") - characters.indexOf("0") + 1);
-		}
-      
-      
-      
-			pwGen += characters[Math.floor(Math.random() * characters.length)];
+		//code to display alphabeth only
+		pwGen += alphabeth[Math.floor(Math.random() * alphabeth.length)];
 		pwDisplayEl.innerText = pwGen;
+  } 
+  	//to check alphabet and symbol is required 
+  else if (
+		 	alphabethCheck.checked === true &&
+		 	symbolCheck.checked === true &&
+		 	numberCheck.checked === false
+		 ) 
+		 	//code to display alphabet and symbol only
+		 {
+      
+		pwGen += alphabeth.concat(symbol)[Math.floor(Math.random() * alphabeth.concat(symbol).length)];
+		pwDisplayEl.innerText = pwGen;
+     
+		} 	
+		//to check alphabet and number is required
+		 else  if (
+		 	alphabethCheck.checked === true &&
+		 	symbolCheck.checked === false &&
+		 	numberCheck.checked === true
+		 ) 
+		 //code to display alphabet and number only
+		 {
+      	
+		pwGen += alphabeth.concat(number)[Math.floor(Math.random() * alphabeth.concat(number).length)];
+		pwDisplayEl.innerText = pwGen;
+     
+		} 
+      //to check number only is required
+		 else  if (
+		 	alphabethCheck.checked === false &&
+		 	symbolCheck.checked === false &&
+		 	numberCheck.checked === true
+		 ) 
+		 //code to display number only
+		 {
+      	
+		pwGen += number[Math.floor(Math.random() * number.length)];
+		pwDisplayEl.innerText = pwGen;
+     
+		} 
+      
+        //to check number and symbol is required
+		 else  if (
+		 	alphabethCheck.checked === false &&
+		 	symbolCheck.checked === true &&
+		 	numberCheck.checked === true
+		 ) 
+		 //code to display number and symbol
+		 {
+      	
+		pwGen += number.concat(symbol)[Math.floor(Math.random() * number.concat(symbol).length)];
+		pwDisplayEl.innerText = pwGen;
+     
+		}
+		
+		      //to check symbol only is required
+		 else  if (
+		 	alphabethCheck.checked === false &&
+		 	symbolCheck.checked === true &&
+		 	numberCheck.checked === false
+		 ) 
+		 //code to display symbol only
+		 {
+      	
+		pwGen += symbol[Math.floor(Math.random() * symbol.length)];
+		pwDisplayEl.innerText = pwGen;
+     
+		}
+		//to check all 3 is required
+		 else  if (
+		 	alphabethCheck.checked === true &&
+		 	symbolCheck.checked === true &&
+		 	numberCheck.checked === true
+		 ) 
+		 //code to display all 3
+		 {
+      	
+		pwGen += symbol.concat(number, alphabeth)[Math.floor(Math.random() * symbol.concat(number, alphabeth).length)];
+		pwDisplayEl.innerText = pwGen;
+     
+		}
+		else {
+		    pwDisplayEl.innerText = "ERROR";
+		    pwDisplayEl.style.color = "red";
+		}
+		
   }
   
 
-	let pwGen = "";
-	// loop through the array
+
+	// password length code to loop through and executive generate function
 
 	let selected = document.getElementById("pw-length");
 	if (selected.value == 11) {
 		for (let i = 0; i < 11; i++) {
-			pwArr();
+			randomPwDisplay();
 		}
 	} else if (selected.value == 12) {
 		for (let i = 0; i < 12; i++) {
-			pwArr();
+			randomPwDisplay();
 		}
 	} else if (selected.value == 13) {
 		for (let i = 0; i < 13; i++) {
-			pwArr();
+			randomPwDisplay();
 		}
 	} else if (selected.value == 14) {
 		for (let i = 0; i < 14; i++) {
-			pwArr();
+			randomPwDisplay();
 		}
 	} else if (selected.value == 15) {
 		for (let i = 0; i < 15; i++) {
-			pwArr();
+			randomPwDisplay();
 		}
 	} else {
 		for (let i = 0; i < 10; i++) {
-			pwArr();
+			randomPwDisplay();
 		}
 	}
 });
