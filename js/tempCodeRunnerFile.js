@@ -1,0 +1,1 @@
+let num = console.log(characters.splice(52, 10));
