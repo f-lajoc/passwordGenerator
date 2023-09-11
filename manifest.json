@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "Password Generator",
+  "description": "This is your go-to solution for creating & storing strong, unique passwords effortlessly. __ It helps you enhance online security and simplify your digital life. ",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "images/favicon-16.png",
+      "32": "images/favicon-32.png",
+      "48":  "images/favicon-48.ico",
+      "128": "images/favicon-128.ico",
+      "192": "images/favicon-192.png",
+      "512": "images/favicon-512.png"
+    }
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}

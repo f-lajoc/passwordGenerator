@@ -7,3 +7,11 @@ rm .git/index.lock is used to solve this git error "Another git process seems to
 
 ##The slice() method returns selected elements in an array, as a new array.
 The slice() method selects from a given start, up to a (not inclusive) given end.
+
+
+------------------------------
+make changes to make code work as chrome extension and separately as a site
+
+- get icons that will be editable to work and on site leave it as font awesome fetch
+- do not upload manifest on github
+- remove body min width for site

@@ -5,17 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PW-Generator</title>
   <link href="/dist/main.css" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/434622864a.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://kit.fontawesome.com/434622864a.js" crossorigin="anonymous"></script> //REMOVE COMMENT FOR SITE -->
+  
 </head>
-
-<body class="bg-color1  h-screen text-color2 box-border dark:bg-color7 dark:text-color1">
+<!--min-w-[400px]  //REMOVE FOR SITE //ADD m-h-screen-->
+<body class="min-w-[400px] m-0 p-0 flex flex-col justify-between  bg-color1 text-color2 box-border dark:bg-color7 dark:text-color1">
   <!-- header -->
   <header class="flex justify-between py-2 px-5 bg-color7 text-color1 dark:bg-color1 dark:text-color2">
-<h1 class="font-medium" alt="logo for the password generator site"><i class="fa-solid fa-building-shield text-color1 dark:text-color2"></i>Password<span class="text-color3">Generator</span></h1>
-
-<p class="toggle-dark"><i class="fa-solid fa-circle-half-stroke text-color1 dark:text-color2"></i></p>
-  </header>
-
+<!-- <h1 class="font-medium" alt="logo for the password generator site"><i class="fa-solid fa-building-shield text-color1 dark:text-color2"></i>Password<span class="text-color3">Generator</span></h1> //REMOVE COMMENT FOR SITE-->
+<h1 class="font-medium flex align-middle" alt="logo for the password generator site"><img src="images/logo-dark.svg" alt="logo for darkmode" class="w-5 hidden dark:block"><img src="images/logo-light.svg" alt="img for lightmode" class="w-5 dark:hidden">Password<span class="text-color3">Generator</span></h1>
+<!-- <p class="toggle-dark" alt="light and dark mode toggle"><i class="fa-solid fa-circle-half-stroke dark:text-color2"></i></p>
+ //REMOVE COMMENT FOR SITE -->
+ <p class="toggle-dark" alt="toggle for light and dark mode"><img src="images/dark-icon.svg" alt="img for dark" class="w-5 hidden dark:block"><img src="images/light-icon.svg" alt="img for light" class="w-5 dark:hidden">
+</p>
+</header>
+  
+<!-- h-[90%] for site -->
 <div class=" h-[90vh] flex flex-col justify-center items-center">
   <div class="shadow-sm shadow-color7 dark:shadow-color1 p-2">
   <h1 class="text-2xl font-bold text-color2 dark:text-color1">Generate a</h1>
@@ -56,11 +61,14 @@
     <button id="save-btn" class="bg-color2 dark:bg-color6 rounded text-color5 w-6/12 font-bold">SAVE</button>
     <button id="clear-btn" class="bg-color2 dark:bg-color6 rounded text-color5 w-6/12 font-bold">CLEAR ALL</button>
   </div>
+
+  <div id="storage-box" class="shadow-sm hidden shadow-color7 dark:shadow-color1 p-2">
+  </div>
   </div>
 
 </div>
 
-<footer class="text-center bg-color7 text-color1 dark:bg-color1 dark:text-color2  font-semibold text-lg">Made by <a class="text-color3" href="https://github.com/f-lajoc" class="text-color1"> Lajoc_devs</a></footer>
+<footer class="py-1 text-center bg-color7 text-color1 dark:bg-color1 dark:text-color2  font-medium text-base">Made by <a class="text-color3" href="https://github.com/f-lajoc" class="text-color1"> Lajoc_devs</a></footer>
 
 <script src="js/script.js"></script>
 </body>

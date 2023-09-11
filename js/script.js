@@ -24,6 +24,7 @@ const alphabethCheck = document.getElementById("alphabeth");
 const numberCheck = document.getElementById("number");
 const symbolCheck = document.getElementById("symbol");
 const pwLenghtEl = document.getElementById("pw-length");
+const storageBoxEl = document.getElementById("storage-box");
 
 //Password Generation requirements 
 
@@ -159,3 +160,18 @@ pwGenerateBtn.addEventListener("click", function () {
 		}
 	}
 });
+
+// Save button function to render whatever is in display when clicked
+saveBtn.addEventListener("click", function () {
+	storageBoxEl.style.display = "block";
+	storageBoxEl.innerText = pwDisplayEl.innerText;
+	// localStorage.setItem("passwords", pwDisplayEl.innerText)
+	pwDisplayEl.innerText = "";
+})
+
+// Clear button function to clear whatever is in storage and display when clicked
+clearBtn.addEventListener("click", function () {
+	storageBoxEl.innerText = "";
+	pwDisplayEl.innerText = "";
+	storageBoxEl.style.display = "none";
+})

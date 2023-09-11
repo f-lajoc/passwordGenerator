@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#toggle-icon{
+  
+ color: blue;
+  font-size: x-large;
+}
