@@ -799,48 +799,8 @@ video {
   height: 90%;
 }
 
-.h-full {
-  height: 100%;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
-.h-80 {
-  height: 20rem;
-}
-
-.h-\[80vh\] {
-  height: 80vh;
-}
-
-.h-\[\] {
-  height: ;
-}
-
-.h-\[100\%\] {
-  height: 100%;
-}
-
-.h-\[0\%\] {
-  height: 0%;
-}
-
-.h-\[60vh\] {
-  height: 60vh;
-}
-
 .h-\[90vh\] {
   height: 90vh;
-}
-
-.h-\[0vh\] {
-  height: 0vh;
-}
-
-.h-\[70vh\] {
-  height: 70vh;
 }
 
 .w-5 {

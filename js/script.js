@@ -1,4 +1,4 @@
-// self invoking function for light and dark mode
+/* SELF INVOKING FUNCTION FOR LIGHT & DARK MODE*/
 (function () {
 	const darkToggle = document.querySelector(".toggle-dark");
 
@@ -26,8 +26,8 @@ const symbolCheck = document.getElementById("symbol");
 const pwLenghtEl = document.getElementById("pw-length");
 const storageBoxEl = document.getElementById("storage-box");
 
-//Password Generation requirements 
 
+/* PASSWORD GENERATION REQUIREMENTS*/
 pwGenerateBtn.addEventListener("click", function () {
 	let pwGen = "";
 	
@@ -131,8 +131,7 @@ pwGenerateBtn.addEventListener("click", function () {
   
 
 
-	// password length code to loop through and executive generate function
-
+	/* PASSWORD LENGTH TO CHECK FOR BEFORE GENRATION*/
 	let selected = document.getElementById("pw-length");
 	if (selected.value == 11) {
 		for (let i = 0; i < 11; i++) {
@@ -161,17 +160,46 @@ pwGenerateBtn.addEventListener("click", function () {
 	}
 });
 
-// Save button function to render whatever is in display when clicked
+/* SAVE BUTTON TO SAVE AND DISPLAY WHAT IS GENERATED*/
 saveBtn.addEventListener("click", function () {
 	storageBoxEl.style.display = "block";
-	storageBoxEl.innerText = pwDisplayEl.innerText;
-	// localStorage.setItem("passwords", pwDisplayEl.innerText)
-	pwDisplayEl.innerText = "";
-})
+	// Get the current value from localStorage (if any)
+	let savedPasswords = localStorage.getItem("passwords");
 
-// Clear button function to clear whatever is in storage and display when clicked
-clearBtn.addEventListener("click", function () {
-	storageBoxEl.innerText = "";
+	// Append the new password to the existing saved passwords
+	if (savedPasswords) {
+		savedPasswords += "\n" + pwDisplayEl.innerText;
+	} else {
+		savedPasswords = pwDisplayEl.innerText;
+	}
+
+	// Store the updated passwords in localStorage
+	localStorage.setItem("passwords", savedPasswords);
+
+	// Display the saved passwords in storageBoxEl
+	storageBoxEl.innerText = savedPasswords;
+
+	// Clear the displayed password
 	pwDisplayEl.innerText = "";
+});
+
+
+/* DISPLAY SAVED PASSWORDS ON PAGE LOAD*/
+window.addEventListener("load", function () {
+	const savedPasswords = localStorage.getItem("passwords");
+
+	if (savedPasswords) {
+		// Display the saved passwords in storageBoxEl
+		storageBoxEl.innerText = savedPasswords;
+	}
+});
+
+/* CLEAR BUTTON TO CLEAR BOTH STORAGE AND DISPLAY*/
+clearBtn.addEventListener("click", function () {
+	// Clear the saved passwords in localStorage
+	localStorage.clear();
+
+	// Clear the displayed password
 	storageBoxEl.style.display = "none";
-})
+	pwDisplayEl.innerText = "";
+});
