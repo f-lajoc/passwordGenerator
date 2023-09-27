@@ -183,7 +183,6 @@ saveBtn.addEventListener("click", function () {
 	pwDisplayEl.innerText = "";
 });
 
-
 /* DISPLAY SAVED PASSWORDS ON PAGE LOAD*/
 window.addEventListener("load", function () {
 	const savedPasswords = localStorage.getItem("passwords");
