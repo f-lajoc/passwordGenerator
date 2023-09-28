@@ -5,7 +5,7 @@ Generates, Saves and Clears Passwords based on user requirement
 ## Table of contents
   - [Overview](#overview)
     - [The Features](#the-features)
-    - [Video](#video)
+    - [Video and Images](#video-and-images)
     - [Links](#links)
   - [My process](#my-process)
     - [Built with](#built-with)
@@ -30,12 +30,12 @@ Generates, Saves and Clears Passwords based on user requirement
 - 10 - 15 password length option
 - Number, Alphabeth and Symbol toggle 
 
-### Video 
+### Video and Images 
+![Screenshot_20230928-121430](https://github.com/f-lajoc/passwordGenerator/assets/104025961/e5090001-61fd-43d4-88b7-f65fa1ec00f8)
 
-
+![Screenshot_20230928-121406](https://github.com/f-lajoc/passwordGenerator/assets/104025961/9d55ba4d-3679-465b-a20c-22fb09ab4101)
 
 https://github.com/f-lajoc/passwordGenerator/assets/104025961/60bf7052-9d06-48a5-89e5-c28bac1a59c2
-
 
 
 ### Links
@@ -156,6 +156,7 @@ https://github.com/f-lajoc/passwordGenerator/assets/104025961/60bf7052-9d06-48a5
 - [Chrome extension](https://scrimba.com/playlist/pPD7Kt4)
 - [Manifest external link](https://groups.google.com/a/chromium.org/g/chromium-apps/c/bkSOQKYMUmw?pli=1)
 - [Tailwind documentation](https://v2.tailwindcss.com/docs)
+- [Publish extension for free on Microsoft edge](https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/publish/create-dev-account#:~:text=There%20is%20no%20registration%20fee%20for%20submitting%20extensions%20to%20the%20Microsoft%20Edge%20program)
 
 ## Credits
 - extension icon from [https://www.geco.one/about-us]
