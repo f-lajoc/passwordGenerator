@@ -132,7 +132,18 @@ pwGenerateBtn.addEventListener("click", function () {
 
 
 	/* PASSWORD LENGTH TO CHECK FOR BEFORE GENRATION*/
-	let selected = document.getElementById("pw-length");
+//using for in loop instead of conditionals
+let selected = document.getElementById("pw-length").value;
+ let lengthOfPw = [10,11,12,13,14,15]
+	for (let x in lengthOfPw){
+	    if (selected == lengthOfPw[x]){
+	        for (let i=0; i < lengthOfPw[x]; i++){
+	            randomPwDisplay();
+	        }
+	    }
+	}
+	
+/*let selected = document.getElementById("pw-length");
 	if (selected.value == 11) {
 		for (let i = 0; i < 11; i++) {
 			randomPwDisplay();
@@ -157,7 +168,7 @@ pwGenerateBtn.addEventListener("click", function () {
 		for (let i = 0; i < 10; i++) {
 			randomPwDisplay();
 		}
-	}
+	}*/
 });
 
 /* SAVE BUTTON TO SAVE AND DISPLAY WHAT IS GENERATED*/
