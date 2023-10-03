@@ -179,7 +179,7 @@ saveBtn.addEventListener("click", function () {
 
 	// Append the new password to the existing saved passwords
 	if (savedPasswords) {
-		savedPasswords += "\n" + pwDisplayEl.innerText;
+		savedPasswords += "<br>" + pwDisplayEl.innerText;
 	} else {
 		savedPasswords = pwDisplayEl.innerText;
 	}
@@ -188,7 +188,7 @@ saveBtn.addEventListener("click", function () {
 	localStorage.setItem("passwords", savedPasswords);
 
 	// Display the saved passwords in storageBoxEl
-	storageBoxEl.innerText = savedPasswords;
+	storageBoxEl.innerHTML = savedPasswords;
 
 	// Clear the displayed password
 	pwDisplayEl.innerText = "";
