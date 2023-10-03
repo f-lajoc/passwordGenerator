@@ -58,6 +58,7 @@ https://github.com/f-lajoc/passwordGenerator/assets/104025961/60bf7052-9d06-48a5
 - The link to my github at the footer wont work because of manifest, but i resolved it by adding target to my footer link.
 - Tried out Javascript localStorage, i wanted to choose which to use between removeItem() and clear(), i couldn't get any article that focuses on differentiating them, i think i'll write an article on it
 - To publish an extension on chrome, there is need to pay $5 membership fee so i decided to use Microsoft edge to publish for free instead. I've submitted the extension, and will need to check back in 7 working days.
+- `Update` Tried to implement if, for in, & for loop to replace the long if else statement for the password length conditionals and it worked 
 
 ### What I learned and used
 
@@ -157,6 +158,7 @@ https://github.com/f-lajoc/passwordGenerator/assets/104025961/60bf7052-9d06-48a5
 - [Manifest external link](https://groups.google.com/a/chromium.org/g/chromium-apps/c/bkSOQKYMUmw?pli=1)
 - [Tailwind documentation](https://v2.tailwindcss.com/docs)
 - [Publish extension for free on Microsoft edge](https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/publish/create-dev-account#:~:text=There%20is%20no%20registration%20fee%20for%20submitting%20extensions%20to%20the%20Microsoft%20Edge%20program)
+- [for loop](https://www.w3schools.com/js/js_loop_forin.asp)
 
 ## Credits
 - extension icon from [https://www.geco.one/about-us]
