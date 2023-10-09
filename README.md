@@ -42,7 +42,7 @@ https://github.com/f-lajoc/passwordGenerator/assets/104025961/60bf7052-9d06-48a5
 
 - Solution URL: [https://github.com/f-lajoc/passwordGenerator] 
 - Live Site URL: [https://password-generat00r.netlify.app/]
-- Extension: [In progress]
+- Extension: [https://microsoftedge.microsoft.com/addons/detail/gjdmkgjdbleobfpliddcdjddphnnbpid]
 
 ## My process
 
@@ -57,7 +57,7 @@ https://github.com/f-lajoc/passwordGenerator/assets/104025961/60bf7052-9d06-48a5
 - External link does not work on manifest.json for chrome extension which gave me headache as the dark mode feature is linked to font awesome external icon. I resolved this by using the svg instead of font awesome link.
 - The link to my github at the footer wont work because of manifest, but i resolved it by adding target to my footer link.
 - Tried out Javascript localStorage, i wanted to choose which to use between removeItem() and clear(), i couldn't get any article that focuses on differentiating them, i think i'll write an article on it
-- To publish an extension on chrome, there is need to pay $5 membership fee so i decided to use Microsoft edge to publish for free instead. I've submitted the extension, and will need to check back in 7 working days.
+- To publish an extension on chrome, there is need to pay $5 membership fee so i decided to use Microsoft edge to publish for free instead. --- I've submitted the extension, and will need to check back in 7 working days. `Update` Extension has been approved and is now live on Microsoft addons
 - `Update` Tried to implement if, for in, & for loop to replace the long if else statement for the password length conditionals and it worked 
 
 ### What I learned and used
